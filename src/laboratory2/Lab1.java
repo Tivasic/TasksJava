@@ -33,7 +33,11 @@ public class Lab1 {
      * Проверка совпадения точек
      */
     public static boolean checkPoints(Point3d p1, Point3d p2, Point3d p3) {
-        return p1.equals(p2) || p1.equals(p3) || p2.equals(p3);
+        return ((p1.getX() != p2.getX()) || (p1.getY() != p2.getY()) || (p1.getZ() != p2.getZ())) &&
+
+                ((p2.getX() != p3.getX()) || (p2.getY() != p3.getY()) || (p2.getZ() != p3.getZ())) &&
+
+                ((p1.getX() != p3.getX()) || (p1.getY() != p3.getY()) || (p1.getZ() != p3.getZ()));
     }
 
     /**

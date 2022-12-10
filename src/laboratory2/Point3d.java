@@ -88,19 +88,4 @@ public class Point3d {
         return Math.round(dist * 100) / 100.;
     }
 
-    /**
-     * Сравнение значений на равенство.
-     */
-    @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-
-        Point3d point3d = (Point3d) o;
-        return Double.compare(xCoord, point3d.xCoord) == 0
-                && Double.compare(yCoord, point3d.yCoord) == 0
-                && Double.compare(zCoord, point3d.zCoord) == 0;
-    }
 }
